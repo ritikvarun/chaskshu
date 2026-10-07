@@ -1,10 +1,9 @@
 import logo from './assets/logo.png'
-import { Wrench, Phone, MessageCircle } from 'lucide-react'
+import { Wrench, Phone } from 'lucide-react'
 
 export default function App() {
   const phoneNumber = '+91 84497 51133'
   const telLink = 'tel:+918449751133'
-  const waLink = 'https://wa.me/918449751133?text=Hello%20Chakshu%20Team'
 
   return (
     <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-red-600 selection:text-white relative">
@@ -42,7 +41,7 @@ export default function App() {
       </header>
 
       {/* Main Content Area */}
-      <main className="relative z-10 flex-1 max-w-2xl mx-auto px-6 py-12 sm:py-20 flex flex-col items-center justify-center text-center">
+      <main className="relative z-10 flex-1 max-w-2xl mx-auto px-6 py-16 sm:py-28 flex flex-col items-center justify-center text-center">
         
         {/* Status Indicator Icon */}
         <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shadow-sm mb-6">
@@ -58,46 +57,15 @@ export default function App() {
           We are currently performing scheduled maintenance and routine system upgrades to improve your experience. We will be back online shortly!
         </p>
 
-        {/* Contact Information Card */}
-        <div className="mt-8 sm:mt-10 w-full max-w-md bg-slate-50/90 border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-xs">
-          <p className="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-2">
-            Need Immediate Assistance?
-          </p>
-          <p className="text-sm text-slate-600 mb-6">
-            For urgent queries or support, reach out to us directly:
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            {/* Phone Call Button */}
-            <a
-              href={telLink}
-              className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98]"
-            >
-              <Phone className="w-4 h-4 stroke-[2.2]" />
-              <span>Call Us</span>
-            </a>
-
-            {/* WhatsApp Button */}
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98]"
-            >
-              <MessageCircle className="w-4 h-4 stroke-[2.2]" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
-
-          <div className="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-center gap-2 text-slate-700">
-            <span className="text-xs text-slate-500 font-medium">Contact:</span>
-            <a 
-              href={telLink} 
-              className="text-sm font-semibold text-slate-800 hover:text-red-600 transition-colors"
-            >
-              {phoneNumber}
-            </a>
-          </div>
+        {/* Contact Number */}
+        <div className="mt-8">
+          <a
+            href={telLink}
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 hover:text-red-600 font-semibold text-sm transition-all shadow-xs"
+          >
+            <Phone className="w-4 h-4 text-red-600" />
+            <span>Contact: {phoneNumber}</span>
+          </a>
         </div>
       </main>
 
