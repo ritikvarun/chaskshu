@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/lander",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
